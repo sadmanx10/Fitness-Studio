@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Fitness import views as f_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',f_views.index,name='index'),
+    path('login/',f_views.login,name='login'),
 ]
