@@ -21,5 +21,7 @@ from Fitness import views as f_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',f_views.index,name='index'),
-    path('login/',f_views.login,name='login'),
+    path('login.html',f_views.login,name='login'),
+    path('products.html',f_views.products,name='products'),
+    path('cart.html',f_views.cart,name='cart'),
 ]

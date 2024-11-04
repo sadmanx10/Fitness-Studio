@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h2>Shop Product Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock Quantity</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for p in products %}
+            <tr>
+                <td>p.name</td>
+                <td>p.category</td>
+                <td>p.price</td>
+                <td>p.stock_quantity</td>
+                <td><img src="p.image.url" alt="Product 1"></td>
+                <td>p.description</td>
+                <td>p.rating</td>
+            </tr>
+         {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
