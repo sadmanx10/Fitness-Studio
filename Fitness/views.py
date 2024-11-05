@@ -12,7 +12,7 @@ def products(request):
     context={
         'products':products
     }
-    return render(request,template_name='Fitness/products.html')
+    return render(request,template_name='Fitness/products.html',context= context)
 def cart(request):
     return render(request,template_name='Fitness/cart.html')
 
