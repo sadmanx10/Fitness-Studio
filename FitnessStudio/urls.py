@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Fitness import views as f_views
+from . import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +27,4 @@ urlpatterns = [
     path('login.html',f_views.login,name='login'),
     path('products.html',f_views.products,name='products'),
     path('cart.html',f_views.cart,name='cart'),
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
