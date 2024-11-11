@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
+   <link rel="stylesheet" href="{%static 'styles.css'%}">
  <!-- Hero Section -->
     <section class="hero bg-dark text-white py-5">
         <div class="container d-lg-flex align-items-center justify-content-between">
@@ -13,7 +15,7 @@
             </div>
 
             <div class="hero-image mt-5 mt-lg-0">
-                <img src="bodybuilder.png" alt="Fitness Coach" class="img-fluid rounded">
+                <img src="media/bodybuilder.png" alt="Fitness Coach" class="img-fluid rounded">
             </div>
         </div>
     </section>
