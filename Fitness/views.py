@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Products
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -11,15 +11,14 @@ def authView(request):
   form = UserCreationForm(request.POST or None)
   if form.is_valid():
    form.save()
-   return redirect("Fitness:login")
+   return redirect("login")
  else:
   form = UserCreationForm()
  return render(request, "registration/signup.html", {"form": form})
 
 
 
-def login(request):
-    return render(request,template_name='registration/login.html')
+
 @login_required
 def index(request):
     return render(request,template_name='Fitness/index.html')
