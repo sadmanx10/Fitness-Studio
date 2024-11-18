@@ -5,10 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e8351ec-c9c9-4d23-a605-1943cbc3e93f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Fitness/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/battlerope.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/gym-dumble.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/super-bench.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/product_images/weightbench.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/protein.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/trademill.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/Pro.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Fitness/product_details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fitness/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fitness/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FitnessStudio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/FitnessStudio/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FitnessStudio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FitnessStudio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Fitness/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Fitness/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Fitness/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Fitness/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +45,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sadmanx10&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sadmanx10/Fitness-Studio.git&quot;,
+    &quot;accountId&quot;: &quot;f85416b8-38b2-4d40-9f80-2eed13395317&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -39,10 +71,17 @@
     "Python.urls.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "H:/Practice/Fitness-Studio",
+    "last_opened_file_path": "F:/Fitness-Studio/Fitness-Studio",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Fitness-Studio\Fitness-Studio\templates\registration" />
+      <recent name="F:\Fitness-Studio\Fitness-Studio\media\product_images" />
+      <recent name="F:\Fitness-Studio\Fitness-Studio\media" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

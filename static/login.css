@@ -1,3 +1,4 @@
+
 /* Fullscreen background styling */
 body {
 
@@ -8,7 +9,7 @@ background-blend-mode:overlay;
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #1c1c1c; /* Dark background */
-    
+
     justify-content: center;
     align-items: center;
 
