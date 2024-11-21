@@ -1,0 +1,57 @@
+/* General form container styling */
+.form1 {
+   background-color: #1c1c1c; /* Dark background to match theme */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+    border: 1px solid #444; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto; /* Center align */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Soft shadow */
+    color: #fff;
+}
+
+/* Input fields and textarea styling */
+.form1 input[type="text"],
+.form1 input[type="number"],
+.form1 input[type="file"],
+.form1 textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #666;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+/* Submit button styling */
+.form1 input[type="submit"] {
+    background-color: #ff4500; /* Bright call-to-action color */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form1 input[type="submit"]:hover {
+    background-color: #ff6347; /* Slightly lighter on hover */
+}
+
+/* Description textarea styling */
+.form1 textarea {
+    height: 100px; /* Make description area taller */
+}
+
+/* Responsive Design */
+/* Target only the form inside the content block */
+.body .form1 {
+    background-color: #1c1c1c;
+
+    /* Other styles remain unchanged */
+}
+

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{%static 'member.css'%}">
+
+<section class="membership-section">
+        <h1 class="section-title">Our Membership Plans</h1>
+        <div class="plans-container">
+
+            <!-- Pro Plan -->
+            <div class="plan-card">
+                <h2 class="plan-name">Pro Plan</h2>
+                <p class="plan-price">1999<span>TK/Mo</span></p>
+                <ul class="plan-features">
+                    <li>Access to All Exercise Videos</li>
+                    <li>Progress Tracking</li>
+                    <li>Supportive Online Community</li>
+                    <li>Advanced, Personalized Workout Plans</li>
+                    <li>Access to Advanced Workout Programs</li>
+                    <li>Body Composition Analysis</li>
+                </ul>
+                <button class="choose-button">Choose This Plan</button>
+            </div>
+
+            <!-- Custom Plan -->
+            <div class="plan-card popular">
+                <h2 class="plan-name">Custom Plan</h2>
+                <p class="plan-price">2499<span>TK/Mo</span></p>
+                <ul class="plan-features">
+                    <li>Access to All Exercise Videos</li>
+                    <li>Progress Tracking</li>
+                    <li>Supportive Online Community</li>
+                    <li>Fully Customized Workout and Nutrition Plan</li>
+                    <li>Weekly One-on-One Calls with a Trainer</li>
+                    <li>Exclusive User Discounts</li>
+                </ul>
+                <button class="choose-button">Choose This Plan</button>
+            </div>
+
+            <!-- Beginner Plan -->
+            <div class="plan-card">
+                <h2 class="plan-name">Beginner Plan</h2>
+                <p class="plan-price">999<span>TK/Mo</span></p>
+                <ul class="plan-features">
+                    <li>Access to All Exercise Videos</li>
+                    <li>Progress Tracking</li>
+                    <li>Supportive Online Community</li>
+                    <li>Personalized Workout Plans</li>
+                    <li>Basic Nutrition Guidance</li>
+                    <li>Access to Fitness Classes</li>
+                </ul>
+                <button class="choose-button">Choose This Plan</button>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

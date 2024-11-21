@@ -16,7 +16,8 @@
         <nav class="container navbar navbar-expand-lg navbar-dark">
 
             <a class="navbar-brand " href="#">
-                <img src="media/image.png" alt="Fitness Studio Logo" width="40" height="40" class="d-inline-block align-text-top">
+                <img src="{% static 'images/logo.png' %}" alt="Fitness Studio Logo" width="40" height="40" class="d-inline-block align-text-top">
+
                 Fitness Studio
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,18 +28,18 @@
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Challenge</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Coaching</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="member.html">Membership</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Shop </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
 
-                    <nav class="navbar navbar-dark bg-dark">
-                        <div class="container-fluid">
-                          <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-danger me-2" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                          </form>
-                        </div>
-                      </nav>
+                    <div class="d-flex align-items-center">
+                     <form class="d-flex">
+                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-danger me-2" type="submit">
+                           <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                      </form>
+                    </div>
 
 
                 </ul>
@@ -51,7 +52,6 @@
         </nav>
     </header>
 
-
 {% if user.is_authenticated %}
     <p>Welcome, {{ user.username }}</p>
     <a href="{% url 'logout' %}">Logout</a>
@@ -61,7 +61,6 @@
 {% block content %}
 
 {% endblock %}
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

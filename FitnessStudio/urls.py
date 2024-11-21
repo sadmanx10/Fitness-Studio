@@ -29,10 +29,13 @@ urlpatterns = [
     path('',f_views.index,name='index'),
     #path('login.html',f_views.login,name='login'),
     path('products.html',f_views.products,name='products'),
+    path('about.html',f_views.about,name='about'),
+    path('member.html',f_views.member,name='member'),
     path('/<str:id>', f_views.product_details, name='product_details'),
     path('cart.html',f_views.cart,name='cart'),
     path('login.html', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('signup/', f_views.authView, name="authView"),
-    path("", include(("Fitness.urls", "Fitness"), "Fitness"))
+    path("", include(("Fitness.urls", "Fitness"), "Fitness")),
+    path('upload_product/', f_views.upload_product, name='upload_product'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
