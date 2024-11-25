@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e8351ec-c9c9-4d23-a605-1943cbc3e93f" name="Changes" comment="new page add">
-      <change afterPath="$PROJECT_DIR$/static/challenge.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/coach.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/learn.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Fitness/Learnmore.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Fitness/challenge.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Fitness/coaching.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Fitness/delete_product.html" afterDir="false" />
+    <list default="true" id="6e8351ec-c9c9-4d23-a605-1943cbc3e93f" name="Changes" comment="update delete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FitnessStudio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FitnessStudio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Fitness/delete_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/delete_product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Fitness/product_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/product_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Fitness/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732223245441</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update delete">
+      <option name="closed" value="true" />
+      <created>1732559330030</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732559330030</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +131,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="log in" />
     <MESSAGE value="new page add" />
-    <option name="LAST_COMMIT_MESSAGE" value="new page add" />
+    <MESSAGE value="update delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="update delete" />
   </component>
 </project>

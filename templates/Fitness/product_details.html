@@ -1,17 +1,40 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    {{product.name}}
-    {{product.price}}
-    {{ product.description }}
-    {{product.rating}}
-
-
-    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-             <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'update_product' product.p_id %}">Update Product</a></div>
+<div class="container mt-5">
+    <!-- Product Details Card -->
+    <div class="card shadow-sm">
+        <div class="card-header text-center bg-primary text-white">
+            <h3>{{ product.name }}</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <!-- Product Image (Optional) -->
+                <div class="col-md-4 text-center">
+                    {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid rounded">
+                    {% else %}
+                    <img src="{% static 'default-product.png' %}" alt="Default Image" class="img-fluid rounded">
+                    {% endif %}
+                </div>
+                <!-- Product Details -->
+                <div class="col-md-8">
+                    <h5 class="card-title text-primary">Price: ${{ product.price }}</h5>
+                    <p class="card-text"><strong>Description:</strong> {{ product.description }}</p>
+                    <p class="card-text"><strong>Rating:</strong> ⭐ {{ product.rating }}/5</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-center gap-3">
+            <!-- Update Button -->
+            <a href="{% url 'update_product' product.p_id %}" class="btn btn-warning">
+                <i class="bi bi-pencil-square"></i> Update Product
+            </a>
+            <!-- Delete Button -->
+            <a href="{% url 'delete_product' product.p_id %}" class="btn btn-danger">
+                <i class="bi bi-trash"></i> Delete Product
+            </a>
+        </div>
     </div>
-
-    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'delete_product' product.p_id %}">Delete</a></div>
-    </div>
+</div>
 {% endblock %}
