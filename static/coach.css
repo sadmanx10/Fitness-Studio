@@ -1,0 +1,125 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+
+/* Container */
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Header */
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header .highlight {
+    color: #ff4c4c;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+
+/* Trainers Section */
+
+.trainers {
+    margin-top: 40px;
+}
+
+.trainers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+/* Trainer Card */
+
+.trainer-card {
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trainer-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.trainer-card img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.trainer-card h2 {
+    font-size: 1.2em;
+    color: #ff4c4c;
+    margin-bottom: 5px;
+}
+
+.trainer-card p {
+    font-size: 1em;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.trainer-card .learn-more {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff4c4c;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.trainer-card .learn-more:hover {
+    background-color: #e63939;
+}
+
+
+/* View All Button */
+
+.view-all {
+    margin-top: 30px;
+}
+
+.view-all .view-all-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff4c4c;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+.view-all .view-all-btn:hover {
+    background-color: #e63939;
+}

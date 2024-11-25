@@ -5,5 +5,5 @@ from .models import *
 
 class ProductForm(ModelForm):
    class Meta:
-       model = Products
+       model = Productz
        fields = '__all__'

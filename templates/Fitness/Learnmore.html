@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{%static 'learn.css'%}">
+<body>
+    <div class="container3">
+        <header>
+            <h1>Challenge Details</h1>
+            <a href="challenge.html" class="back-button">← Back to Challenges</a>
+        </header>
+        <section class="details">
+            <img src="https://via.placeholder.com/600" alt="Challenge Image">
+            <div class="content"1>
+                <h2>Losing Weight</h2>
+                <p>
+                    Join our tailored weight loss programs designed to help you burn fat and achieve a healthier, leaner body. Our programs include nutritional guidance, exercise routines, and progress tracking tools to keep you on track.
+                </p>
+                <h3>What You’ll Get:</h3>
+                <ul>
+                    <li>Personalized workout routines</li>
+                    <li>Custom meal plans</li>
+                    <li>Progress tracking tools</li>
+                    <li>Support from expert trainers</li>
+                </ul>
+                <a href="#" class="join-button">Join Now</a>
+            </div>
+        </section>
+    </div>
+</body>
+{% endblock %}
