@@ -5,6 +5,7 @@ import uuid
 
 
 class Productz(models.Model):
+        objects = None
         name = models.CharField(max_length=100)
         p_id = models.UUIDField(
             primary_key=True,
@@ -18,6 +19,9 @@ class Productz(models.Model):
         description = models.TextField()
         rating = models.DecimalField(max_digits=3, decimal_places=2, default=0)
 
-
         def __str__(self):
             return self.name
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    is_admin = models.BooleanField(default=True)

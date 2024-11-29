@@ -32,10 +32,12 @@
         {% endfor %}
     </div>
 </div>
+
+  {% if user.userprofile.is_admin %}
 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
     <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'upload_product'%}">Add Product</a></div>
 </div>
-
+{%endif%}
 
 
 

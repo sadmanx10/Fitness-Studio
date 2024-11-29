@@ -27,6 +27,7 @@
         </div>
         <div class="card-footer d-flex justify-content-center gap-3">
             <!-- Update Button -->
+            {% if user.userprofile.is_admin %}
             <a href="{% url 'update_product' product.p_id %}" class="btn btn-warning">
                 <i class="bi bi-pencil-square"></i> Update Product
             </a>
@@ -34,6 +35,7 @@
             <a href="{% url 'delete_product' product.p_id %}" class="btn btn-danger">
                 <i class="bi bi-trash"></i> Delete Product
             </a>
+            {%endif%}
         </div>
     </div>
 </div>
