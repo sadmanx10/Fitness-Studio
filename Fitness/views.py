@@ -7,6 +7,7 @@ from .models import Productz, UserProfile
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from .forms import ProductForm, RegistrationForm
+from .models import UserProfile
 import uuid
 from uuid import uuid4
 
@@ -125,3 +126,8 @@ def logout_user(request):
 
 def select_user(request):
     return render(request, 'registration/select_user.html')
+def profile_view(request):
+    # Assuming the logged-in user is viewing their own profile
+    user_profile = get_object_or_404(UserProfile, user=request.user)
+
+    return render(request, 'registration/profile.html', {'user_profile': user_profile})

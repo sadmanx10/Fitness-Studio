@@ -1,0 +1,132 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background: url("{% static 'images/gym.jpg' %}") no-repeat center center fixed;
+            background-size: cover;
+            color: #f0f0f0; /* Light text color for dark theme */
+        }
+
+        /* Adding a dark, low-opacity overlay */
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Black overlay with 80% opacity */
+            z-index: -1;
+        }
+
+        .profile-container {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgba(34, 34, 34, 0.95); /* Increased opacity (95%) for better visibility */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            color: #ffffff;
+        }
+
+        .profile-header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ff4500; /* Accent color */
+        }
+
+        .profile-header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #ff4500; /* Accent color */
+        }
+
+        .profile-header p {
+            margin: 5px 0;
+            color: #ccc;
+        }
+
+        .profile-info {
+            padding: 20px;
+        }
+
+        .profile-info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .profile-info strong {
+            color: #ff4500; /* Accent color for labels */
+        }
+
+        .profile-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .profile-image img {
+            max-width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff4500; /* Accent color */
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            .profile-container {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            .profile-header h1 {
+                font-size: 24px;
+            }
+
+            .profile-info p {
+                font-size: 14px;
+            }
+
+            .profile-image img {
+                max-width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Profile Header Section -->
+        <div class="profile-header">
+            <h1>{{ user_profile.user.username }}</h1>
+            <p>{{ user_profile.user.email }}</p>
+        </div>
+
+
+
+        <!-- Profile Information Section -->
+        <div class="profile-info">
+            <p><strong>Full Name:</strong> {{ user_profile.user.first_name }} {{ user_profile.user.last_name }}</p>
+            <p><strong>Email:</strong> {{ user_profile.user.email }}</p>
+            <p><strong>Role:</strong>
+                {% if user_profile.is_admin %}
+                    Admin
+                {% else %}
+                    Customer
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

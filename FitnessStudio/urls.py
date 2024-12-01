@@ -39,6 +39,8 @@ urlpatterns = [
     path('challenge.html',f_views.challenge,name='challenge'),
     path('learnmore.html', f_views.learnmore, name='learnmore'),
     path('<str:p_id>', f_views.product_details, name='product_details'),
+    #path('profile/', f_views.profile_view, name='profile'),
+    path('profile/', f_views.profile_view, name='user_profile'),
     #path('update_product/<str:p_id>', f_views.update_product, name='update_product'),
     path('cart.html',f_views.cart,name='cart'),
     #path('login.html', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),

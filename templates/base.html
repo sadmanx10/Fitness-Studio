@@ -46,17 +46,12 @@
                         <i class="fa-solid fa-cart-shopping fa-2x"></i>
                     </button>
                 </a>
-<!--                <a href="{% url 'login' %}" class="me-2">-->
-<!--                    <button class="btn btn-outline-danger">Login</button>-->
-<!--                </a>-->
-<!--                 <a href="{% url 'select_user' %}" class="me-2">-->
-<!--                </a>-->
                 <div class="dropdown">
                     <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 20px; padding: 5px 15px;">
                         <i class="bi bi-person-circle"></i> {{ user.username }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                        <li><a class="dropdown-item" href="#">View Profile</a></li>
+                        <li><a class="dropdown-item" href="{% url 'user_profile' %}">View Profile</a></li>
                         <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item text-danger" href="{% url 'logout' %}">Logout</a></li>
@@ -68,12 +63,7 @@
 </header>
 
 
-<!--{% if user.is_authenticated %}-->
-<!--    <p>Welcome, {{ user.username }}</p>-->
-<!--    <a href="{% url 'logout' %}">Logout</a>-->
-<!--{% else %}-->
-<!--    <a href="{% url 'login' %}">Login</a>-->
-<!--{% endif %}-->
+
 {% block content %}
 
 {% endblock %}

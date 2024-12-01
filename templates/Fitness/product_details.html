@@ -19,8 +19,10 @@
                 </div>
                 <!-- Product Details -->
                 <div class="col-md-8">
-                    <h5 class="card-title text-primary">Price: ${{ product.price }}</h5>
+                    <h5 class="card-title text-primary">Price: {{ product.price }} TK</h5>
+                    <p class="card-text"><strong>Id:</strong> {{ product.p_id }}</p>
                     <p class="card-text"><strong>Description:</strong> {{ product.description }}</p>
+                     <p class="card-text"><strong>In Stock:</strong> {{ product.stock_quantity }}</p>
                     <p class="card-text"><strong>Rating:</strong> ⭐ {{ product.rating }}/5</p>
                 </div>
             </div>

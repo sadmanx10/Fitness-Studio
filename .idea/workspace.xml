@@ -5,19 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e8351ec-c9c9-4d23-a605-1943cbc3e93f" name="Changes" comment="update delete">
+      <change afterPath="$PROJECT_DIR$/templates/registration/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fitness/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/migrations/0002_productz_delete_products.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Fitness/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fitness/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FitnessStudio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FitnessStudio/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/learn.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/learn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Fitness/Learnmore.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/Learnmore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Fitness/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Fitness/product_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/product_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Fitness/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/select_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/select_user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -42,12 +44,12 @@
     &quot;assignee&quot;: &quot;sadmanx10&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sadmanx10/Fitness-Studio",
-    "accountId": "f85416b8-38b2-4d40-9f80-2eed13395317"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sadmanx10/Fitness-Studio&quot;,
+    &quot;accountId&quot;: &quot;f85416b8-38b2-4d40-9f80-2eed13395317&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -56,26 +58,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.select_user.html.executor": "Run",
-    "Python.urls.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/User/Downloads/Fitness-Studio/Fitness-Studio",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.select_user.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python.urls.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Downloads/Fitness-Studio/Fitness-Studio1.0&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Fitness-Studio\Fitness-Studio\static\images" />
