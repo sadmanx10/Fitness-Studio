@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2>Delete Challenge</h2>
+<p>Are you sure you want to delete the challenge "{{ challenge.title }}"?</p>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a href="{% url 'challenge' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

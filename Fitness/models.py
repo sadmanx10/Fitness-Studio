@@ -27,3 +27,24 @@ class UserProfile(models.Model):
     first_name = models.CharField(max_length=100, blank=True)
     last_name = models.CharField(max_length=100, blank=True)
     is_admin = models.BooleanField(default=True)
+
+
+class Challenge(models.Model):
+    c_id = models.AutoField(primary_key=True)  # Ensure unique ID is auto-generated
+    title = models.CharField(max_length=100)
+    description = models.TextField()  # Short description for the challenge
+    details = models.TextField(null=True, blank=True)
+    image = models.ImageField(upload_to='Challenge_image/', blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+class Trainer(models.Model):
+    t_id = models.AutoField(primary_key=True)  # Unique ID for each trainer
+    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='trainers/')  # Store image in 'trainers/' folder
+    bio = models.TextField()  # Detailed bio for the trainer
+
+    def __str__(self):
+        return self.name

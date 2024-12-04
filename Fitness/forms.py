@@ -19,3 +19,13 @@ class RegistrationForm(UserCreationForm):
 class CustomLoginForm(AuthenticationForm):
     username = forms.CharField(label='Username', max_length=254)
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
+
+class ChallengeForm(forms.ModelForm):
+    class Meta:
+        model = Challenge
+        fields = ['title', 'description', 'details', 'image']
+
+class TrainerForm(forms.ModelForm):
+    class Meta:
+        model = Trainer
+        fields = ['name', 'title', 'image', 'bio']

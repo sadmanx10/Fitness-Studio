@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'coach.css' %}">
+
+<div class="container2">
+    <header>
+        <h1>Delete Trainer</h1>
+    </header>
+
+    <section class="delete-trainer">
+        <p>Are you sure you want to delete {{ trainer.name }} (ID: {{ trainer.t_id }})?</p>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="delete-btn">Yes, Delete</button>
+        </form>
+        <a href="{% url 'trainers_list' %}" class="back-btn">Cancel</a>
+    </section>
+</div>
+
+{% endblock %}

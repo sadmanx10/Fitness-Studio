@@ -123,3 +123,51 @@ header p {
 .view-all .view-all-btn:hover {
     background-color: #e63939;
 }
+
+.delete-btn {
+        background-color: #e63946;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .delete-btn:hover {
+        background-color: #b83239;
+    }
+
+    .back-btn {
+        display: inline-block;
+        background-color: #1d3557;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+        background-color: #12324a;
+    }
+
+    .trainer-detail {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+
+
+    .trainer-card img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+
+
+    .back-button {
+        margin-top: 20px;
+    }

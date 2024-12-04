@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'coach.css' %}">
+
+<div class="container2">
+    <header>
+        <h1>Meet Our <span class="highlight">Trainers</span></h1>
+        <p>At this part, you can see a few of the many positive reviews of our customers.</p>
+    </header>
+
+    <section class="trainers">
+        <div class="trainers-grid">
+            {% for trainer in trainers %}
+            <div class="trainer-card">
+                <img src="{{ trainer.image.url }}" alt="{{ trainer.name }}">
+                <h2>{{ trainer.name }}</h2>
+                <p>{{ trainer.title }}</p>
+                <p><strong>ID:</strong> {{ trainer.t_id }}</p>
+                <a href="{% url 'trainer_detail' trainer.t_id %}" class="learn-more">Learn More</a>
+
+            </div>
+            {% endfor %}
+        </div>
+        <div class="view-all">
+            <a href="{% url 'add_trainer' %}" class="view-all-btn">Add New Trainer</a>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

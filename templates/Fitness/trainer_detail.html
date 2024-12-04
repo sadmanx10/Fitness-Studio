@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'coach.css' %}">
+
+<div class="container2">
+    <header>
+        <h1>Meet Our Trainer: <span class="highlight">{{ trainer.name }}</span></h1>
+    </header>
+
+    <section class="trainer-detail">
+        <div class="trainer-card">
+            <img src="{{ trainer.image.url }}" alt="{{ trainer.name }}">
+            <h2>{{ trainer.name }}</h2>
+            <p><strong>ID:</strong> {{ trainer.t_id }}</p>
+            <p><strong>Title:</strong> {{ trainer.title }}</p>
+            <p><strong>Bio:</strong></p>
+            <p>{{ trainer.bio }}</p>
+        </div>
+        {% if user.userprofile.is_admin %}
+
+          <form method="POST" action="{% url 'delete_trainer' trainer.t_id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="delete-btn" >Delete</button>
+                </form>
+    {%endif%}
+    </section>
+
+    <div class="back-button">
+        <a href="{% url 'trainers_list' %}" class="back-btn">Back to All Trainers</a>
+    </div>
+</div>
+
+{% endblock %}

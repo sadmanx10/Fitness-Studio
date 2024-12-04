@@ -1,0 +1,16 @@
+
+{% load static %}
+
+    <link rel="stylesheet" href="{% static 'forms.css' %}">
+
+<body>
+    <div class="container">
+        <h1>Create a New Challenge</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Create Challenge</button>
+        </form>
+        <a href="{% url 'challenge' %}" class="btn back-btn">Back to Challenges</a>
+    </div>
+</body>

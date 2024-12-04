@@ -1,0 +1,33 @@
+
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'challenge_detail.css' %}">
+
+<body>
+    <div class="container">
+        <div class="challenge-detail">
+           {% if challenge.image %}
+                <img src="{{ challenge.image.url }}" class="card-img-top" alt="{{ challenge.title }}" style="width: 100%; height: 200px; object-fit: cover;">
+                {% else %}
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="No Image Available" style="width: 100%; height: 200px; object-fit: cover;">
+                {% endif %}
+            <h1>{{ challenge.title }}</h1>
+            <p class="short-description">{{ challenge.description }}</p>
+            <div class="details">
+                <p>{{ challenge.details }}</p>
+            </div>
+            <a href="{% url 'challenge' %}" class="btn">Back to Challenges</a>
+        </div>
+    </div>
+    {% if user.userprofile.is_admin %}
+   <a href="{% url 'update_challenge' challenge.c_id %}" class="btn btn-warning">
+                <i class="bi bi-pencil-square"></i> Update challenge
+            </a>
+            <!-- Delete Button -->
+            <a href="{% url 'delete_challenge' challenge.c_id %}" class="btn btn-danger">
+                <i class="bi bi-trash"></i> Delete challenge
+            </a>
+    {%endif%}
+</body>
+

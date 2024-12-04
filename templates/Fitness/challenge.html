@@ -1,58 +1,35 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" href="{%static 'challenge.css'%}">
+<link rel="stylesheet" href="{% static 'challenge.css' %}">
 
-<body>
-    <div class="container1">
-        <h1>Challenges</h1>
-        <p>At this part, you can easily access all of our challenges. Take a look at them and choose whichever you want.</p>
-        <div class="challenges-grid">
-            <!-- Challenge 1 -->
-            <div class="challenge-card">
-                <img src="media/weight loss.jpg" alt="Losing Weight">
-                <h2>Losing Weight</h2>
-                <p>Achieve sustainable weight loss with our customized programs. Start your journey to a healthier, leaner body today.</p>
-                <a href="learnmore.html">Learn More</a>
-            </div>
-            <!-- Challenge 2 -->
-            <div class="challenge-card">
-                <img src="media/Building Muscle.jpg" alt="Building Muscle">
-                <h2>Building Muscle</h2>
-                <p>Develop strength and build muscle with tailored programs. Start your journey right now.</p>
-                <a href="#">Learn More</a>
-            </div>
-            <!-- Challenge 3 -->
-            <div class="challenge-card">
-                <img src="media/Training at Home.jpg" alt="Training at Home">
-                <h2>Training at Home</h2>
-                <p>Stay fit with our effective home workout plans requiring minimal equipment. Click to learn more.</p>
-                <a href="#">Learn More</a>
-            </div>
-            <!-- Challenge 4 -->
-            <div class="challenge-card">
-                <img src="media/Gym Plan.jpg" alt="Gym Plan">
-                <h2>Gym Plan</h2>
-                <p>Maximize your gym sessions with structured plans to achieve your fitness goals.</p>
-                <a href="#">Learn More</a>
-            </div>
-            <!-- Challenge 5 -->
-            <div class="challenge-card">
-                <img src="media/Healthy Nutrition.jpg" alt="Healthy Nutrition">
-                <h2>Healthy Nutrition</h2>
-                <p>Fuel your body with personalized nutrition plans designed to complement your fitness goals.</p>
-                <a href="#">Learn More</a>
-            </div>
-            <!-- Challenge 6 -->
-            <div class="challenge-card">
-                <img src="media/Cardio Endurance.jpg" alt="Cardio Endurance">
-                <h2>Cardio Endurance</h2>
-                <p>Boost your stamina and cardiovascular health with targeted cardio programs.</p>
-                <a href="#">Learn More</a>
-            </div>
+<body3>
+    <h1>Challenges</h1>
+    <p>At this part, you can easily access all of our challenges. Take a look at them and choose whichever you want.</p>
+
+
+
+     <div class="row">
+        {% for challenge in challenge %}
+        <div class="challenge-card">
+            {% if challenge.image %}
+                <img src="{{ challenge.image.url }}" class="card-img-top" alt="{{ challenge.title }}" style="width: 100%; height: 200px; object-fit: cover;">
+                {% else %}
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="No Image Available" style="width: 100%; height: 200px; object-fit: cover;">
+                {% endif %}
+            <h3>{{ challenge.title }}</h3>
+            <p>{{ challenge.description }}</p>
+            <a href="{% url 'challenge_detail' challenge.c_id %}" class="btn" >Learn More</a>
         </div>
+
+        {% endfor %}
     </div>
-</body>
+
+
+<div class="card-footer p-3 pt-4 border-top-0 bg-transparent">
+    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'create_challenge'%}">Add New Challenge</a></div>
+</div>
+</body3>
 
 
 {% endblock %}

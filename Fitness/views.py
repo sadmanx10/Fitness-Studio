@@ -6,8 +6,8 @@ from django.contrib.auth import authenticate, login, logout
 from .models import Productz, UserProfile
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
-from .forms import ProductForm, RegistrationForm
-from .models import UserProfile
+from .forms import ProductForm, RegistrationForm,ChallengeForm,TrainerForm
+from .models import UserProfile,Challenge,Trainer
 import uuid
 from uuid import uuid4
 
@@ -79,10 +79,51 @@ def about(request):
     return render(request,template_name='Fitness/about.html')
 def member(request):
     return render(request,template_name='Fitness/member.html')
-def coaching(request):
-    return render(request,template_name='Fitness/coaching.html')
-def challenge(request):
-    return render(request,template_name='Fitness/challenge.html')
+# def coaching(request):
+#     return render(request,template_name='Fitness/trainers_list.html')
+def challenges(request):
+    challenges = Challenge.objects.all()
+    context = {
+        'challenge': challenges
+    }
+    return render(request, template_name='Fitness/challenge.html', context= context)
+
+def challenge_detail(request, c_id):
+    challenge = get_object_or_404(Challenge, pk=c_id)
+    context = {
+        'challenge': challenge
+    }
+    return render(request, template_name='Fitness/challenge_detail.html',  context= context)
+def create_challenge(request):
+    if request.method == 'POST':
+        form = ChallengeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('challenge')  # Redirect to the challenges list after saving
+    else:
+        form = ChallengeForm()
+    context = {'form': form}
+    return render(request, template_name='Fitness/create_challenge.html', context= context)
+
+
+def update_challenge(request, c_id):
+    challenge = get_object_or_404(Challenge, pk=c_id)
+    if request.method == 'POST':
+        form = ChallengeForm(request.POST, request.FILES, instance=challenge)
+        if form.is_valid():
+            form.save()
+            return redirect('challenge')  # Replace with the name of your challenge list view
+    else:
+        form = ChallengeForm(instance=challenge)
+    return render(request, 'Fitness/update_challenge.html', {'form': form, 'challenge': challenge})
+
+def delete_challenge(request, c_id):
+    challenge = get_object_or_404(Challenge, pk=c_id)
+    if request.method == 'POST':
+        challenge.delete()
+        return redirect('challenge')  # Replace with the name of your challenge list view
+    return render(request, 'Fitness/delete_challenge.html', {'challenge': challenge})
+
 def learnmore(request):
     return render(request,template_name='Fitness/learnmore.html')
 
@@ -131,3 +172,31 @@ def profile_view(request):
     user_profile = get_object_or_404(UserProfile, user=request.user)
 
     return render(request, 'registration/profile.html', {'user_profile': user_profile})
+
+def trainers_list(request):
+    trainers = Trainer.objects.all()
+    return render(request, 'Fitness/trainers_list.html', {'trainers': trainers})
+
+# View trainer details
+def trainer_detail(request, t_id):
+    trainer = get_object_or_404(Trainer, pk=t_id)
+    return render(request, 'Fitness/trainer_detail.html', {'trainer': trainer})
+
+# Add a new trainer
+def add_trainer(request):
+    if request.method == 'POST':
+        form = TrainerForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('trainers_list')
+    else:
+        form = TrainerForm()
+    return render(request, 'Fitness/add_trainer.html', {'form': form})
+
+# Delete a trainer
+def delete_trainer(request, t_id):
+    trainer = get_object_or_404(Trainer, pk=t_id)
+    if request.method == 'POST':
+        trainer.delete()
+        return redirect('trainers_list')
+    return render(request, 'Fitness/delete_trainer.html', {'trainer': trainer})
