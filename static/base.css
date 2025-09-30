@@ -1,16 +1,47 @@
 body {
-
     font-family: 'Roboto', sans-serif;
     background-color: #1a1a1a;
+    color: #fff;
 }
-
 
 .navbar-brand {
-
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem; /* Adjust as needed */
-    font-weight: 700;  /* Optional: Adjust font weight */
+    font-size: 2rem;
+    font-weight: 700;
 }
-.p{
-color:#fff;
+
+p {
+    color: #fff;
+}
+
+/* Responsive spacing for smaller devices */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .fa-cart-shopping {
+        font-size: 1.5rem;
+    }
+
+    .dropdown-toggle {
+        font-size: 0.9rem;
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer ul li {
+        margin-left: 0 !important;
+    }
 }

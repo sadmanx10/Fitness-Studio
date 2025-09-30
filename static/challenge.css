@@ -1,95 +1,204 @@
-/* General styling */
-body3 {
-    font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    color: white;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
+/* Reset small gotchas */
+* { box-sizing: border-box; }
+img { max-width: 100%; display: block; }
+
+/* ===== Section background (ash black) ===== */
+.challenge-section{
+  background: #17191b;      /* ash-type black */
+  padding: 40px 0;
+  color: #fff;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+/* Centered content like your Trainers page */
+.container-narrow{
+  max-width: 1100px;
+  margin: 0 auto;           /* <-- centers the whole block */
+  padding: 0 16px;
+  text-align: center;
 }
 
-p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+/* Headings */
+.challenge-section h1{ font-size: 2.5rem; margin: 0 0 10px; }
+.challenge-section p { font-size: 1.2rem;  margin: 0 0 28px; color:#ccc; }
+
+/* ===== Cards wrapper ===== */
+.cards{
+  /* force flex in case another stylesheet overrides it */
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center !important;  /* center the row */
+  gap: 28px;
+  padding: 0;            /* remove any default ul/ol padding if used */
+  margin: 0 auto;        /* keep centered inside container */
 }
 
-
-/* Card styling */
-.challenge-card {
-    background-color: #2a2a2a;
-    border: 2px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    width: 300px;
-    margin-right:20px;
-    text-align: left;
-    color: #fff;
-    overflow: hidden;
-     transition: transform 0.3s, box-shadow 0.3s;
+/* ===== Card ===== */
+.challenge-card{
+  width: 300px;                 /* consistent card width */
+  display: flex;
+  flex-direction: column;
+  background: #242629;
+  border: 1px solid #2e3134;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  overflow: hidden;
+  text-align: left;
+  transition: transform .25s, box-shadow .25s;
 }
-.challenge-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.challenge-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.45);
 }
 
-
-.challenge-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 5px;
+/* Image */
+.card-img-top{
+  height: 200px;
+  object-fit: cover;
 }
 
-.challenge-card h3 {
-    margin: 15px 0 10px;
-    font-size: 1.5rem;
-    color: #f05454;
+/* Text in card */
+.challenge-card h3{
+  margin: 16px 16px 8px;
+  font-size: 1.2rem;
+  color: #f05454;
+}
+.challenge-card p{
+  margin: 0 16px 16px;
+  color: #d0d0d0;
+  line-height: 1.45;
+  flex: 1;                       /* push button to bottom */
 }
 
-.challenge-card p {
-    font-size: 1rem;
-    margin-bottom: 15px;
+/* Button */
+.challenge-card .btn{
+  display: block;
+  margin: 0 16px 16px;
+  padding: 10px 14px;
+  text-align: center;
+  background: #f05454;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  transition: background .2s, transform .05s, box-shadow .2s;
+}
+.challenge-card .btn:hover{
+  background: #d14040;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.35);
 }
 
-.btn {
+/* Add-challenge button */
+.add-challenge{ margin-top: 32px; }
+.btn-add-challenge{
+  background:#4caf50; color:#fff; padding: 14px 24px;
+  border-radius: 8px; text-decoration:none; font-size:1.05rem;
+}
+.btn-add-challenge:hover{ background:#3e8e41; }
 
-    display: inline-block;
-    background-color: #f05454;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+/* Mobile */
+@media (max-width: 380px){
+  .card-img-top{ height: 170px; }
+}
+/* Reset small gotchas */
+* { box-sizing: border-box; }
+img { max-width: 100%; display: block; }
 
+/* ===== Section background (ash black) ===== */
+.challenge-section{
+  background: #17191b;      /* ash-type black */
+  padding: 40px 0;
+  color: #fff;
 }
 
-.btn:hover {
-    background-color: #d14040;
+/* Centered content like your Trainers page */
+.container-narrow{
+  max-width: 1100px;
+  margin: 0 auto;           /* <-- centers the whole block */
+  padding: 0 16px;
+  text-align: center;
 }
 
-/* Add Challenge Button */
-.add-challenge {
-    margin-top: 20px;
+/* Headings */
+.challenge-section h1{ font-size: 2.5rem; margin: 0 0 10px; }
+.challenge-section p { font-size: 1.2rem;  margin: 0 0 28px; color:#ccc; }
+
+/* ===== Cards wrapper ===== */
+.cards{
+  /* force flex in case another stylesheet overrides it */
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center !important;  /* center the row */
+  gap: 28px;
+  padding: 0;            /* remove any default ul/ol padding if used */
+  margin: 0 auto;        /* keep centered inside container */
 }
 
-.btn-add-challenge {
-    background-color: #4caf50;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
+/* ===== Card ===== */
+.challenge-card{
+  width: 300px;                 /* consistent card width */
+  display: flex;
+  flex-direction: column;
+  background: #242629;
+  border: 1px solid #2e3134;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  overflow: hidden;
+  text-align: left;
+  transition: transform .25s, box-shadow .25s;
+}
+.challenge-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.45);
 }
 
-.btn-add-challenge:hover {
-    background-color: #3e8e41;
+/* Image */
+.card-img-top{
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Text in card */
+.challenge-card h3{
+  margin: 16px 16px 8px;
+  font-size: 1.2rem;
+  color: #f05454;
+}
+.challenge-card p{
+  margin: 0 16px 16px;
+  color: #d0d0d0;
+  line-height: 1.45;
+  flex: 1;                       /* push button to bottom */
+}
+
+/* Button */
+.challenge-card .btn{
+  display: block;
+  margin: 0 16px 16px;
+  padding: 10px 14px;
+  text-align: center;
+  background: #f05454;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  transition: background .2s, transform .05s, box-shadow .2s;
+}
+.challenge-card .btn:hover{
+  background: #d14040;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.35);
+}
+
+/* Add-challenge button */
+.add-challenge{ margin-top: 32px; }
+.btn-add-challenge{
+  background:#4caf50; color:#fff; padding: 14px 24px;
+  border-radius: 8px; text-decoration:none; font-size:1.05rem;
+}
+.btn-add-challenge:hover{ background:#3e8e41; }
+
+/* Mobile */
+@media (max-width: 380px){
+  .card-img-top{ height: 170px; }
 }

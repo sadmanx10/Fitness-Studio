@@ -5,38 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e8351ec-c9c9-4d23-a605-1943cbc3e93f" name="Changes" comment="admin customer">
-      <change afterPath="$PROJECT_DIR$/media/Challenge_image/Building Muscle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Challenge_image/Cardio Endurance.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Challenge_image/Training at Home.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Challenge_image/weight loss.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/challenge_detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/forms.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Fitness/add_trainer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Fitness/challenge_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Fitness/create_challenge.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Fitness/delete_challenge.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Fitness/delete_trainer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Fitness/trainer_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Fitness/update_challenge.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FitnessStudio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/FitnessStudio/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Healthy Nutrition.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/Challenge_image/Healthy Nutrition.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/shuvo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/trainers/shuvo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/trainer1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/trainers/trainer1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/trainer2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/trainers/trainer2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/trainer3.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/trainers/trainer3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/Pro.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/challenge.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/challenge.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/coach.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/coach.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Fitness/challenge.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/challenge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Fitness/coaching.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/trainers_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Fitness/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +19,7 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -60,12 +32,12 @@
     &quot;assignee&quot;: &quot;sadmanx10&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/sadmanx10/Fitness-Studio&quot;,
-    &quot;accountId&quot;: &quot;f85416b8-38b2-4d40-9f80-2eed13395317&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sadmanx10/Fitness-Studio.git",
+    "accountId": "bb9c87c4-222c-4ca0-b3af-b5fa8b3b669c"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -74,26 +46,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.select_user.html.executor&quot;: &quot;Run&quot;,
-    &quot;Python.urls.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Downloads/Fitness-Studio/Fitness-Studio1.0/media/Challenge_image&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.select_user.html.executor": "Run",
+    "Python.test1.executor": "Run",
+    "Python.test2.executor": "Run",
+    "Python.urls.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "G:/Final/Fitness-Studio",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Downloads\Fitness-Studio\Fitness-Studio1.0\media\Challenge_image" />
@@ -108,15 +82,65 @@
       <recent name="F:\Fitness-Studio\Fitness-Studio\media" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.test1">
     <configuration name="select_user.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Fitness-Studio/templates/registration/select_user.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Fitness-Studio" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Fitness-Studio" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test2" />
+        <item itemvalue="Python.test1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
