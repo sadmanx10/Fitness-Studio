@@ -10,6 +10,8 @@ from .forms import ProductForm, RegistrationForm,ChallengeForm,TrainerForm
 from .models import UserProfile,Challenge,Trainer
 import uuid
 from uuid import uuid4
+from .models import Productz
+
 
 # Create your views here.
 
@@ -200,3 +202,37 @@ def delete_trainer(request, t_id):
         trainer.delete()
         return redirect('trainers_list')
     return render(request, 'Fitness/delete_trainer.html', {'trainer': trainer})
+
+def add_to_cart(request, product_id):
+    product = get_object_or_404(Productz, p_id=product_id)
+    cart = request.session.get('cart', {})
+    cart[str(product_id)] = cart.get(str(product_id), 0) + 1
+    request.session['cart'] = cart
+    return redirect('view_cart')
+
+def view_cart(request):
+    cart = request.session.get('cart', {})
+    cart_items = []
+    total = 0
+
+    for product_id, quantity in cart.items():
+        product = get_object_or_404(Productz, p_id=product_id)
+        total += product.price * quantity
+        cart_items.append({
+            'product': product,
+            'quantity': quantity,
+            'subtotal': product.price * quantity,
+        })
+
+    return render(request, 'Fitness/cart.html', {'cart_items': cart_items, 'total': total})
+
+
+def remove_from_cart(request, product_id):
+    cart = request.session.get('cart', {})
+
+    if str(product_id) in cart:
+        del cart[str(product_id)]
+        request.session['cart'] = cart  # Save the updated cart back to session
+
+    return redirect('view_cart')
+
