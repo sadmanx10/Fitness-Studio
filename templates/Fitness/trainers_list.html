@@ -1,32 +1,37 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-{% block content %}
-<link rel="stylesheet" href="{% static 'coach.css' %}">
-
-<div class="container2">
-    <header>
-        <h1>Meet Our <span class="highlight">Trainers</span></h1>
-        <p>At this part, you can see a few of the many positive reviews of our customers.</p>
-    </header>
-
-    <section class="trainers">
-        <div class="trainers-grid">
-            {% for trainer in trainers %}
-            <div class="trainer-card">
-                <img src="{{ trainer.image.url }}" alt="{{ trainer.name }}">
-                <h2>{{ trainer.name }}</h2>
-                <p>{{ trainer.title }}</p>
-                <p><strong>ID:</strong> {{ trainer.t_id }}</p>
-                <a href="{% url 'trainer_detail' trainer.t_id %}" class="learn-more">Learn More</a>
-
+<div class="trainer-section" style="background:#18191a;min-height:100vh;padding-bottom:40px;">
+    <h1 style="text-align:center;color:#fff;font-size:64px;font-weight:500;margin-top:60px;">Meet Our <span style="color:#ff3c3c;">Trainers</span></h1>
+    <p style="text-align:center;color:#bdbdbd;font-size:28px;margin-bottom:40px;">At this part, you can see a few of the many positive reviews of our customers.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;">
+        {% for trainer in trainers %}
+        <div style="background:#232323;border-radius:16px;padding:32px 24px;width:320px;box-shadow:0 4px 24px #0002;display:flex;flex-direction:column;align-items:center;">
+            <img src="{{ trainer.image.url }}" alt="{{ trainer.name }}" style="width:120px;height:120px;object-fit:cover;border-radius:8px;margin-bottom:16px;">
+            <h2 style="color:#ff3c3c;font-size:28px;margin:0 0 8px 0;text-align:center;">{{ trainer.name }}</h2>
+            <div style="color:#bdbdbd;font-size:20px;margin-bottom:8px;text-align:center;">{{ trainer.title }}</div>
+            <div style="color:#fff;font-size:16px;margin-bottom:12px;text-align:center;">{{ trainer.bio }}</div>
+            <div style="color:#bdbdbd;font-size:16px;margin-bottom:12px;">ID: <b>{{ trainer.t_id }}</b></div>
+            {% if user.is_authenticated and user.userprofile.is_admin %}
+            <div style="display:flex;gap:8px;">
+                <a href="{% url 'trainer_detail' trainer.t_id %}" class="btn" style="background:#ff3c3c;color:#fff;padding:8px 24px;border:none;border-radius:8px;text-decoration:none;font-size:18px;">Learn More</a>
+                <form method="post" action="{% url 'delete_trainer' trainer.t_id %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn" style="background:#333;color:#fff;padding:8px 16px;border:none;border-radius:8px;font-size:18px;">Remove</button>
+                </form>
             </div>
-            {% endfor %}
+            {% else %}
+            <div style="display:flex;gap:8px;">
+                <a href="{% url 'trainer_detail' trainer.t_id %}" class="btn" style="background:#ff3c3c;color:#fff;padding:8px 24px;border:none;border-radius:8px;text-decoration:none;font-size:18px;">Learn More</a>
+            </div>
+            {% endif %}
         </div>
-        <div class="view-all">
-            <a href="{% url 'add_trainer' %}" class="view-all-btn">Add New Trainer</a>
-        </div>
-    </section>
+        {% endfor %}
+    </div>
+    {% if user.is_authenticated and user.userprofile.is_admin %}
+    <div style="text-align:center;margin-top:40px;">
+        <a href="{% url 'add_trainer' %}" class="btn" style="background:#ff3c3c;color:#fff;padding:16px 40px;border:none;border-radius:12px;font-size:24px;text-decoration:none;">Add New Trainer</a>
+    </div>
+    {% endif %}
 </div>
 
 {% endblock %}
