@@ -203,11 +203,29 @@ def delete_trainer(request, t_id):
         return redirect('trainers_list')
     return render(request, 'Fitness/delete_trainer.html', {'trainer': trainer})
 
+
 def add_to_cart(request, product_id):
     product = get_object_or_404(Productz, p_id=product_id)
     cart = request.session.get('cart', {})
     cart[str(product_id)] = cart.get(str(product_id), 0) + 1
     request.session['cart'] = cart
+    return redirect('view_cart')
+
+def increase_cart_quantity(request, product_id):
+    cart = request.session.get('cart', {})
+    if str(product_id) in cart:
+        cart[str(product_id)] += 1
+        request.session['cart'] = cart
+    return redirect('view_cart')
+
+def decrease_cart_quantity(request, product_id):
+    cart = request.session.get('cart', {})
+    if str(product_id) in cart and cart[str(product_id)] > 1:
+        cart[str(product_id)] -= 1
+        request.session['cart'] = cart
+    elif str(product_id) in cart:
+        del cart[str(product_id)]
+        request.session['cart'] = cart
     return redirect('view_cart')
 
 def view_cart(request):

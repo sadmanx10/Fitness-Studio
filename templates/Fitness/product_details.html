@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 <div class="container mt-5">
     <!-- Product Details Card -->
     <div class="card shadow-sm">
@@ -12,18 +10,16 @@
                 <!-- Product Image (Optional) -->
                 <div class="col-md-4 text-center">
                     {% if product.image %}
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid rounded">
-                    {% else %}
-                    <img src="{% static 'default-product.png' %}" alt="Default Image" class="img-fluid rounded">
-                    {% endif %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid rounded"> {% else %}
+                    <img src="{% static 'default-product.png' %}" alt="Default Image" class="img-fluid rounded"> {% endif %}
                 </div>
                 <!-- Product Details -->
                 <div class="col-md-8">
-                    <h5 class="card-title text-primary">Price: {{ product.price }} TK</h5>
-                    <p class="card-text"><strong>Id:</strong> {{ product.p_id }}</p>
-                    <p class="card-text"><strong>Description:</strong> {{ product.description }}</p>
-                     <p class="card-text"><strong>In Stock:</strong> {{ product.stock_quantity }}</p>
-                    <p class="card-text"><strong>Rating:</strong> ⭐ {{ product.rating }}/5</p>
+                    <h5 class="card-title" style="color:#111;">Price: {{ product.price }} TK</h5>
+                    <p class="card-text" style="color:#111;"><strong>Id:</strong> {{ product.p_id }}</p>
+                    <p class="card-text" style="color:#111;"><strong>Description:</strong> {{ product.description }}</p>
+                    <p class="card-text" style="color:#111;"><strong>In Stock:</strong> {{ product.stock_quantity }}</p>
+                    <p class="card-text" style="color:#111;"><strong>Rating:</strong> ⭐ {{ product.rating }}/5</p>
                 </div>
             </div>
         </div>

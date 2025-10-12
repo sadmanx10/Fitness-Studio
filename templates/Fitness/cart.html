@@ -1,5 +1,4 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <div class="container mt-5">
     <div class="card bg-dark text-white shadow-lg">
         <div class="card-header text-center">
@@ -7,33 +6,43 @@
         </div>
         <div class="card-body">
             {% if cart_items %}
-                <div class="table-responsive">
-                    <table class="table table-dark table-hover text-center align-middle">
-                        <thead class="thead-light">
-                            <tr>
-                                <th scope="col">Product</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Subtotal</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for item in cart_items %}
-                            <tr>
-                                <td>{{ item.product.name }}</td>
-                                <td>{{ item.quantity }}</td>
-                                <td>{{ item.product.price }} Tk</td>
-                                <td>{{ item.subtotal }} Tk</td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                <div class="text-end mt-3">
-                    <h4><strong>Total:</strong> {{ total }} Tk</h4>
-                </div>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover text-center align-middle">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in cart_items %}
+                        <tr>
+                            <td>{{ item.product.name }}</td>
+                            <td>
+                                <form action="{% url 'decrease_cart_quantity' item.product.p_id %}" method="post" style="display:inline;">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-sm btn-secondary">-</button>
+                                </form>
+                                <span style="margin:0 12px;">{{ item.quantity }}</span>
+                                <form action="{% url 'increase_cart_quantity' item.product.p_id %}" method="post" style="display:inline;">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-sm btn-secondary">+</button>
+                                </form>
+                            </td>
+                            <td>{{ item.product.price }} Tk</td>
+                            <td>{{ item.subtotal }} Tk</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-end mt-3">
+                <h4><strong>Total:</strong> {{ total }} Tk</h4>
+            </div>
             {% else %}
-                <p class="text-center fs-5">🛒 Your cart is currently empty.</p>
+            <p class="text-center fs-5">🛒 Your cart is currently empty.</p>
             {% endif %}
         </div>
     </div>

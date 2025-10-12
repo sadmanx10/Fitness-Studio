@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e8351ec-c9c9-4d23-a605-1943cbc3e93f" name="Changes" comment="admin customer">
+    <list default="true" id="6e8351ec-c9c9-4d23-a605-1943cbc3e93f" name="Changes" comment="img add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fitness/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fitness/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Fitness/trainers_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Fitness/trainers_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
