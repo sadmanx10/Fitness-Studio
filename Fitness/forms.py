@@ -29,3 +29,12 @@ class TrainerForm(forms.ModelForm):
     class Meta:
         model = Trainer
         fields = ['name', 'title', 'image', 'bio']
+
+class SessionForm(forms.ModelForm):
+    class Meta:
+        model = Session
+        fields = ['title', 'description', 'video_url', 'trainer']
+        widgets = {
+            'description': forms.Textarea(attrs={'rows': 4}),
+            'video_url': forms.URLInput(attrs={'placeholder': 'https://www.youtube.com/watch?v=...'}),
+        }

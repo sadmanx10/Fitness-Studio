@@ -48,3 +48,14 @@ class Trainer(models.Model):
 
     def __str__(self):
         return self.name
+
+class Session(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    video_url = models.URLField()  # For storing YouTube video URLs
+    trainer = models.ForeignKey(Trainer, on_delete=models.SET_NULL, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title

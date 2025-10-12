@@ -1,16 +1,16 @@
+
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
+from django.db import models
 
-
-from .models import Productz, UserProfile
+from .models import Productz, UserProfile, Challenge, Trainer, Session
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
-from .forms import ProductForm, RegistrationForm,ChallengeForm,TrainerForm
-from .models import UserProfile,Challenge,Trainer
+from .forms import ProductForm, RegistrationForm, ChallengeForm, TrainerForm, SessionForm
+from .models import UserProfile, Challenge, Trainer, Session
 import uuid
 from uuid import uuid4
-from .models import Productz
 
 
 # Create your views here.
@@ -35,11 +35,19 @@ def index(request):
 
 
 def products(request):
-    products=Productz.objects.all()
-    context={
-        'products':products
+    query = request.GET.get('q', '')
+    products = Productz.objects.all()
+    if query:
+        products = products.filter(
+            models.Q(name__icontains=query) |
+            models.Q(category__icontains=query) |
+            models.Q(description__icontains=query)
+        )
+    context = {
+        'products': products,
+        'query': query,
     }
-    return render(request,template_name='Fitness/products.html',context= context)
+    return render(request, template_name='Fitness/products.html', context=context)
 def cart(request):
     return render(request,template_name='Fitness/cart.html')
 
@@ -254,3 +262,50 @@ def remove_from_cart(request, product_id):
 
     return redirect('view_cart')
 
+@login_required
+def session_list(request):
+    sessions = Session.objects.all().order_by('-created_at')
+    return render(request, 'Fitness/sessions.html', {'sessions': sessions})
+
+@login_required
+def create_session(request):
+    if not request.user.is_staff:
+        return redirect('sessions')
+        
+    if request.method == 'POST':
+        form = SessionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('sessions')
+    else:
+        form = SessionForm()
+    
+    return render(request, 'Fitness/session_form.html', {'form': form})
+
+@login_required
+def edit_session(request, session_id):
+    if not request.user.is_staff:
+        return redirect('sessions')
+        
+    session = get_object_or_404(Session, id=session_id)
+    if request.method == 'POST':
+        form = SessionForm(request.POST, instance=session)
+        if form.is_valid():
+            form.save()
+            return redirect('sessions')
+    else:
+        form = SessionForm(instance=session)
+    
+    return render(request, 'Fitness/session_form.html', {'form': form})
+
+@login_required
+def delete_session(request, session_id):
+    if not request.user.is_staff:
+        return redirect('sessions')
+        
+    session = get_object_or_404(Session, id=session_id)
+    if request.method == 'POST':
+        session.delete()
+        return redirect('sessions')
+    
+    return render(request, 'Fitness/delete_session.html', {'session': session})

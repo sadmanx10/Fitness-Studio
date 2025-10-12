@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Fitness Sessions</h1>
+
+    {% if user.is_staff %}
+    <div class="mb-4">
+        <a href="{% url 'create_session' %}" class="btn btn-primary">Add New Session</a>
+    </div>
+    {% endif %}
+
+    <div class="row">
+        {% for session in sessions %}
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #111; background: none;">{{ session.title }}</h5>
+                    <p class="card-text" style="color: #111; background: none;">{{ session.description|truncatewords:30 }}</p>
+                    <div class="embed-responsive embed-responsive-16by9 mb-3">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ session.video_url|slice:'32:' }}" allowfullscreen style="width: 100%; height: 315px;">
+                        </iframe>
+                    </div>
+                    {% if session.trainer %}
+                    <p class="card-text"><small class="text-muted">Trainer: {{ session.trainer.name }}</small></p>
+                    {% endif %} {% if user.is_staff %}
+                    <a href="{% url 'edit_session' session.id %}" class="btn btn-warning">Edit</a>
+                    <a href="{% url 'delete_session' session.id %}" class="btn btn-danger">Delete</a> {% endif %}
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p>No sessions available yet.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

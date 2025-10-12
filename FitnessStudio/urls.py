@@ -51,6 +51,12 @@ urlpatterns = [
     path('upload_product/', f_views.upload_product, name='upload_product'),
     path('update_product/<str:p_id>', f_views.update_product, name='update_product'),
     path('delete_product/<str:p_id>', f_views.delete_product, name='delete_product'),
+    
+    # Session URLs
+    path('sessions/', f_views.session_list, name='sessions'),
+    path('sessions/create/', f_views.create_session, name='create_session'),
+    path('sessions/<int:session_id>/edit/', f_views.edit_session, name='edit_session'),
+    path('sessions/<int:session_id>/delete/', f_views.delete_session, name='delete_session'),
 
     # 🔻 These MUST be at the bottom
     path('<str:c_id>/', f_views.challenge_detail, name='challenge_detail'),

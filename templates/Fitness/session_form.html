@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="mb-0" style="color: #111; background: none;">{% if form.instance.pk %}Edit{% else %}Create{% endif %} Session</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="{{ form.title.id_for_label }}" class="form-label" style="color: #111; background: none;">Title</label> {{ form.title }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.description.id_for_label }}" class="form-label" style="color: #111; background: none;">Description</label> {{ form.description }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.video_url.id_for_label }}" class="form-label" style="color: #111; background: none;">YouTube Video URL</label> {{ form.video_url }}
+                            <small style="color: #111; background: none;">Enter the full YouTube video URL</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{ form.trainer.id_for_label }}" class="form-label" style="color: #111; background: none;">Trainer</label> {{ form.trainer }}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Session</button>
+                        <a href="{% url 'sessions' %}" class="btn btn-secondary">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
